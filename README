@@ -1,0 +1,44 @@
+# Changes I made to site-packages
+
+~/opt/miniconda3/lib/python3.8/site-packages/tom_targets/forms.py
+
+def extra_field_to_form_field(field_type):
+    if field_type == 'number':
+        return forms.FloatField(required=False)
+    elif field_type == 'boolean':
+        return forms.BooleanField(required=False)
+    elif field_type == 'datetime':
+        return forms.DateTimeField(required=False)
+    elif field_type == 'string':
+        return forms.CharField(required=False, widget=forms.TextInput)
+    elif field_type == 'comment':
+        return forms.CharField(required=False, widget=forms.Textarea)
+    else:
+        raise ValueError(
+            'Invalid field type {}. Field type must be one of: number, boolean, datetime, string or comment'.format(field_type)
+        )
+
+# Here I changed 'string' and added 'comment' field_types also added 
+
+
+###########################################################
+~/opt/miniconda3/lib/python3.8/site-packages/tom_targets/forms.py
+
+def filter_for_field(field):
+    if field['type'] == 'number':
+        return django_filters.RangeFilter(field_name=field['name'], method=filter_number)
+    elif field['type'] == 'boolean':
+        return django_filters.BooleanFilter(field_name=field['name'], method=filter_boolean)
+    elif field['type'] == 'datetime':
+        return django_filters.DateTimeFromToRangeFilter(field_name=field['name'], method=filter_datetime)
+    elif field['type'] == 'string':
+        return django_filters.CharFilter(field_name=field['name'], method=filter_text)
+    elif field['type'] == 'comment':
+        return django_filters.CharFilter(field_name=field['name'], method=filter_text)
+
+    else:
+        raise ValueError(
+            'Invalid field type {}. Field type must be one of: number, boolean, datetime string'.format(field['type'])
+        )
+
+# I added lines for 'comment'

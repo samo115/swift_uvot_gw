@@ -1,0 +1,56 @@
+{% extends 'tom_common/base.html' %}
+{% load static targets_extras observation_extras dataproduct_extras tom_common_extras %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<div class="row">
+  <div class="col-md-8">
+    <h2 class="text-center">Welcome to the Swift/UVOT GW TOM Toolkit.</h2>
+    <p class="text-center"><img src="{% static '/img/Ssatellite.jpg' %}" class="img-fluid mx-auto"></p>
+    <p class="text-center"><img src="{% static '/img/170817A_uvot.png' %}" class="img-fluid mx-auto"></p>
+    <h3>Quick links</h3>
+    <ul>
+      <li>
+	<a href="{% url 'targets:create-group' %}" title="Create GW Target">Add a new GW event (group)</a>.
+      </li>
+      <li>
+        <a href="{% url 'targets:create' %}" title="Create Target">Add a new source (target) </a>.
+      </li>
+<!--       <li>
+        Customize this page by editing the
+        <code>templates/tom_common/index.html</code> file or by editing your
+        project's <code>urls.py</code>.
+      </li>
+-->
+      <li>
+        Take a look at some <a href="https://tom-toolkit.readthedocs.io/en/stable/customization/index.html">common first customizations</a>.
+      </li>
+    </ul>
+    <h3>Other Resources</h3>
+    <ul>
+      <li>The official <a href="https://www.djangoproject.com/">Django documentation</a>.</li>
+      <li>The official <a href="http://www.astropy.org/">Astropy documentation</a>.</li>
+    </ul>
+  </div>
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-header">
+        Latest Comments
+      </div>
+      {% recent_comments %}
+    </div>
+    <br/>
+    <div class="card">
+      <div class="card-header">
+        Latest Targets
+      </div>
+      {% recent_targets %}
+    </div>
+    <br/>
+    <div class="card">
+      <div class="card-header">
+        Latest GW Targets
+      </div>
+      {% recent_groups %}
+  </div>
+</div>
+{% endblock %}
