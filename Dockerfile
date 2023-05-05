@@ -7,11 +7,11 @@ WORKDIR /swift_uvot_gw
 # Copy the application files into the working directory
 COPY . /swift_uvot_gw
 
-#Copy ssh key to allow access to git: samo115/tom_build
-COPY ~/.ssh/id_ed25519 /home/user/.ssh/id_ed25519
+##Copy ssh key to allow access to git: samo115/tom_build
+#COPY ~/.ssh/id_ed25519 /home/user/.ssh/id_ed25519
 
-RUN chown -R user:user /home/user/.ssh
-RUN echo "Host remotehost\n\tStrictHostKeyChecking no\n" >> /home/user/.ssh/config
+#RUN chown -R user:user /home/user/.ssh
+#RUN echo "Host remotehost\n\tStrictHostKeyChecking no\n" >> /home/user/.ssh/config
 
 
 # Install the application dependencies
