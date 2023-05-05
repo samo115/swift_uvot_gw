@@ -25,5 +25,9 @@ db.sqlite3
 .Spotlight-V100
 
 */data/
+*/data/*
+*/data/*/*
+*/data/*/*/*
+
 
 /swift_uvot_gw/.env
