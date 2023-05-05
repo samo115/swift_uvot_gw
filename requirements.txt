@@ -7,3 +7,4 @@ numpy==1.23.5
 plotly==5.9.0
 python_dateutil==2.8.2
 swifttools==3.0.15
+tom_base @ git+https://github.com/samo115/tom_base
