@@ -1,12 +1,16 @@
 # Python
 *.pyc
 *~
+*/~
+*/*/~
 __pycache__
-
+*/__pycache__
+*/__init__.py
 # Env
 .env
 myvenv/
 venv/
+*/.env*
 
 # Database
 db.sqlite3
@@ -20,6 +24,6 @@ db.sqlite3
 .fseventsd
 .Spotlight-V100
 
-/data/
+*/data/
 
 /swift_uvot_gw/.env
