@@ -1,0 +1,9 @@
+astroplan==0.8
+astropy==5.1
+Django==4.0.6
+django_crispy_forms==1.14.0
+django_environ==0.10.0
+numpy==1.23.5
+plotly==5.9.0
+python_dateutil==2.8.2
+swifttools==3.0.15
