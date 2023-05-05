@@ -10,7 +10,7 @@ __pycache__
 .env
 myvenv/
 venv/
-*/.env*
+/.env*
 
 # Database
 db.sqlite3
@@ -24,10 +24,10 @@ db.sqlite3
 .fseventsd
 .Spotlight-V100
 
-*/data/
-*/data/*
-*/data/*/*
-*/data/*/*/*
+/data/
+/data/*
+/data/*/*
+/data/*/*/*
 
 
 /swift_uvot_gw/.env
