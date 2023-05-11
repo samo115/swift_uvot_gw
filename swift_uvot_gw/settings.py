@@ -27,7 +27,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '9q9@k2(rdo0teu-#4iiy-q$7jim@zf71d%3-=6&amp;7quw%brtt*m'
+SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'django_comments',
     'bootstrap4',
     'crispy_forms',
+    'crispy_bootstrap4',
     'rest_framework',
     'rest_framework.authtoken',
     'django_filters',
@@ -115,8 +116,13 @@ WSGI_APPLICATION = 'swift_uvot_gw.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#        'Engine': 'django.db.backends.sqlite3',
+#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgresql_swiftuvgw',
+        'Host':'localhost',
+        'PORT': '5432',
+        'DISABLE_SERVER_SIDE_CURSORS': True,
     }
 }
 
@@ -277,8 +283,8 @@ TOM_ALERT_CLASSES = [
     'tom_alerts.brokers.antares.ANTARESBroker',
     'tom_alerts.brokers.gaia.GaiaBroker',
     'tom_alerts.brokers.lasair.LasairBroker',
-    'tom_alerts.brokers.mars.MARSBroker',
-    'tom_alerts.brokers.scimma.SCIMMABroker',
+#    'tom_alerts.brokers.mars.MARSBroker',
+#    'tom_alerts.brokers.scimma.SCIMMABroker',
     'tom_alerts.brokers.scout.ScoutBroker',
     'tom_alerts.brokers.tns.TNSBroker',
     'tom_alerts.brokers.fink.FinkBroker',

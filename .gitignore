@@ -31,3 +31,4 @@ db.sqlite3
 
 
 /swift_uvot_gw/.env
+/swift_uvot_gw/settings.py
