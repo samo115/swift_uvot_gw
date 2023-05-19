@@ -10,10 +10,17 @@
     <h3>Quick links</h3>
     <ul>
       <li>
-	<a href="{% url 'targets:create-group' %}" title="Create GW Target">Add a new GW event (group)</a>.
+        <a href="{% url 'targets:create' %}" title="Create Target">Add a new source (target) </a>.
       </li>
       <li>
-        <a href="{% url 'targets:create' %}" title="Create Target">Add a new source (target) </a>.
+        <a href="{% url 'todolist' %}" title="Checklist">UVOT Checklist</a>
+      </li>
+      <br>
+      <li>
+        <a href="{% url 'draftdetectiongcn' %}" title="Draft detection GCN">Draft detection GCN</a>
+      </li>
+      <li>
+        <a href="{% url 'draftsummarygcn' %}" title="Draft summary GCN">Draft summary GCN</a>
       </li>
 <!--       <li>
         Customize this page by editing the
@@ -21,14 +28,6 @@
         project's <code>urls.py</code>.
       </li>
 -->
-      <li>
-        Take a look at some <a href="https://tom-toolkit.readthedocs.io/en/stable/customization/index.html">common first customizations</a>.
-      </li>
-    </ul>
-    <h3>Other Resources</h3>
-    <ul>
-      <li>The official <a href="https://www.djangoproject.com/">Django documentation</a>.</li>
-      <li>The official <a href="http://www.astropy.org/">Astropy documentation</a>.</li>
     </ul>
   </div>
   <div class="col-md-4">
@@ -46,11 +45,5 @@
       {% recent_targets %}
     </div>
     <br/>
-    <div class="card">
-      <div class="card-header">
-        Latest GW Targets
-      </div>
-      {% recent_groups %}
-  </div>
 </div>
 {% endblock %}

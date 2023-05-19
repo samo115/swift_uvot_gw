@@ -1,0 +1,71 @@
+{% extends 'tom_common/base.html' %}
+{% block content %}
+<h2 class="text-center">UVOT Gravitational Wave followup checklist.</h2>
+<h3>Checking thumbnails</h3>
+<ul>
+  <li>
+    Keep and eye on GCNs
+  </li>
+  <li>
+    Go to <a href="https://www.mssl.ucl.ac.uk/gwave/prot/">MSSL gwaves</a> thumbnail page. Sort by probability to check sources with high probability first, then sort by type to then check Q0 objects, followed by everything else. Push interesting candidates to the Swift TOM page (will be a button on the gwaves entry)
+  </li>
+  <li>
+    Keep an eye out for XRT sources. From <a href="https://www.swift.ac.uk/GW">Leicester GW page</a> page click on XRT link for GW event, then for a particular source use the 'observation list' to find obsids to download.
+  </li>
+  <li>
+    For other sources, you can find the OBSID for a given coordinate by using the GW-XRT page "Fields Planned - search" tool.
+  </li>
+</ul>
+
+<h3>Further Candidate source checks</h3>
+    <ul>
+      <li>
+	go to <a href="http://cdsportal.u-strasbg.fr">CDS Portal</a> and put in the coordinate to get an easy way to view the position in lots of images.
+      </li>
+      <li>
+	go to <a href="http://vizier.u-strasbg.fr/viz-bin/VizieR">Vizier</a> and put the coordinate in the "search by position", modify "target dimension" to 5 arcsec! Click on Go! (not 'find catalogs') Check sources found especially GAIA DR2 (g band),WISE (IR), AAVSO
+      </li>
+      <li>
+	Option: construct an SED from the catalogs using <a href="https://vizier.u-strasbg.fr/vizier/sed/doc/">Vizier SED catalogs</a> - this can give an idea of the sort of precursor or absence of it.
+      </li>
+      <li>
+	Is this a <a href="https://www.minorplanetcenter.net/cgi-bin/checkmp.cgi">minor planet</a>?
+      </li>
+      <li>
+	or <a href="https://www.space-track.org/auth/login">manmade satellite</a>?
+      </li>
+      <li>
+	Is the source near the edge which shows shift-and-add? Check if there is a star on/near(<20 arcsec) the opposite edge (compare sky image to larger DSS image and blink; use line region parallel to edge to line up)
+      </li>
+      <li>
+	is the source fuzzy or small and there is a very bright source nearly mirrored through the centre of the detector (it is not precisely mirrored but within ~200 pixels)
+      </li>
+      <li>
+	add new transient to <a href="https://wis-tns.weizmann.ac.il/">TNS</a>
+      </li>
+    </ul>
+
+<h3>Updating the world</h3>
+<ul>
+    <li>
+    Send GCN out for good candidates (<a href="{% url 'draftdetectiongcn' %}" title="Detection GCN">Draft GCN</a>), leave comment on TOM that GCN has been submitted, with the GCN number.
+  </li>
+  <li>
+    Send final summary GCN when all thumbnails have been checked  (<a href="{% url 'draftsummarygcn' %}" title="Summary GCN">Draft GCN</a>).
+  </li>
+</ul>
+
+<h3>Useful links</h3>
+<ul>
+      <li>
+	<a href="https://www.swift.ac.uk/GW">Leicester GW page</a>
+      </li>
+      <li>
+	<a href="https://swift.gsfc.nasa.gov/uvot_tdrss/thumbnails">Franks thumbnail page</a>
+      </li>
+      <li>
+	<a href="https://www.swift.psu.edu/swift/burstwiki/LIGO">Swift LVK wiki page</a>
+      </li>
+
+</ul>
+{% endblock %}

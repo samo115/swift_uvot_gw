@@ -1,0 +1,79 @@
+{% extends 'tom_common/base.html' %}
+{% block content %}
+<h2 class="text-center">Draft detection GCN.</h2>
+
+<div class="row">
+  <div class="col-md-8">
+    <p>
+  LIGO/Virgo SXXXXXXX: Transient found in Swift/UVOT counterpart search
+  <br>
+  <br>
+  N. P. M. Kuin (UCL-MSSL), A. A. Breeveld (MSSL-UCL), P. Brown (TAMU),
+  <br>
+  C. Gronwall (PSU), F. E. Marshall (NASA/GSFC), S. R. Oates (U. Birmingham), 
+  <br>
+  M.J. Page (UCL-MSSL), M. De Pasquale (Istanbul U.), M. H. Siegel (PSU),
+  <br>
+  A. D'Ai (INAF-IASFPA), P. D'Avanzo (INAF-OAB), S. D. Barthelmy (NASA/GSFC), 
+  <br>
+  A. P. Beardmore (U. Leicester), D. N. Burrows (PSU), S. Campana (INAF-OAB), 
+  <br>
+  S. B. Cenko (NASA/GSFC), G. Cusumano (INAF-IASF PA), V. D'Elia(ASDC), 
+  <br>
+  P. A. Evans (U. Leicester), P. Giommi (ASI), D. Hartmann (Clemson U.), 
+  <br>
+  J. A. Kennea (PSU), N. J. Klingler (PSU), H. A. Krimm (NSF), A. Y. Lien (GSFC/UMBC), 
+  <br>
+  D. B. Malesani (DTU Space), A. Melandri (INAF-OAB), J. A. Nousek (PSU), 
+  <br>
+  P. T. O'Brien (U. Leicester), J. P. Osborne (U. Leicester), C. Pagani (U. Leicester), 
+  <br>
+  K. L. Page (U.Leicester), D.M. Palmer (LANL), M. Perri (ASDC), J. L. Racusin (NASA/GSFC), 
+  <br>
+  T. Sakamoto (AGU), B. Sbarufatti (INAF-OAB/PSU), G. Tagliaferri (INAF-OAB), 
+  <br>
+  A. Tohuvavohu (U Toronto), and E. Troja (NASA/GSFC/UMCP) report on behalf of the Swift team:
+  <br>
+  <br>
+  We report a candidate transient (NAME e.g. S200224ca_UQ1_src31) found in the UVOT search results of the
+  LVC event SXXXXXXX (LIGO/VIRGO Collaboration GCN Circ. XXXXX). 
+  <br>
+  <br>
+  On 20XX-XX-XX at XX:XX:XX UT Swift UVOT took a X.X s exposure in the X band with 
+  exposure ID uuXXXXXXXXXXX (target ID 070XXXX) which shows a new source when compared with
+  archived DSS images. The new source is not listed in the Gaia DR2, 2MASS or GSC2.3 
+  catalogs or Pan-STARRS and is not listed as a minor planet. 
+  <br>
+  <br>
+  The position is: 
+  RA = XX.XX deg
+  Dec = XX.XX deg
+  which is RA=XX:XX:XX, Dec=XX:XX:XX (J2000).
+  <br>
+  <br>
+  The magnitude using the UVOT photometric system  (Breeveld et al. 2011, AIP 
+  Conf. Proc. 1358, 373) is u=XX.XX +/- XX mag (Vega).
+  <br>
+  <br>
+  No source is found at this position in the XRT, with a 3-sigma upper limit of  
+  XX.XX ct s^-1, which corresponds to a 0.3-10 keV observed flux of 
+  XX.XX erg cm^-2 s^-1.
+  <br>
+  <br>
+  At this position, the distance estimate from the LALInference sky map has a mean 
+  of XX Mpc with a sigma of XX Mpc. 
+  <br>
+  <br>
+  There is a bright galaxy in the 2MPZ/GLADE catalogue (Bilicki et al., 2014/Dálya et al., 2018) 
+  XXX at XX arcsec (z = XX, D = XX Mpc, abs magnitude = XX),
+  which is XX kpc away in projection. A second galaxy, XX lies
+  XX arcsec away from the UVOT position. This galaxy has a distance of XX Mpc in
+  the XX catalogue so the projected offset is XX kpc. At the distance of these
+  galaxies, the absolute U magnitude would be XX, which is brighter than AT 2017gfo at
+  t ~ 2 days.
+  <br>
+  <br>
+  This circular is an official product of the Swift team.
+</p>
+</div>
+{% endblock %}

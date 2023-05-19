@@ -1,0 +1,78 @@
+{% extends 'tom_common/base.html' %}
+{% block content %}
+<div class="row">
+  <div class="col-md-8">
+    <h2 class="text-center">UVOT Gravity Wave followup checklist.</h2>
+    <h3>Keeping track of data</h3>
+    <ul>read relevant GCNs
+      <li>
+load XRT-GW page https://www.swift.ac.uk/GW/ and follow links for the latest GW to 'Plan' and 'XRT'. Take down info on distance, type of object etc.
+      </li>
+      <li>
+	From XRT-GW page follow link to 'UVOT analysis' and note the number in the web address: this should be the number containing the new data (needed for next two bullets).
+      </li>
+      <li>
+	Check Frank's thumbnail page (https://swift.gsfc.nasa.gov/uvot_tdrss/thumbnails/) to find latest - use sort by time.
+      </li>
+      <li>
+	Go to MSSL's thumbnail page (https://www.mssl.ucl.ac.uk/gwave/prot/). Sort by type to check Q0 objects first.
+      </li>
+      <li>
+	Keep an eye out for XRT sources. From XRT-GW page click on a particular source and use the 'observation list' for obsids to download.
+      </li>
+      <li>
+	For other sources, you can find the OBS for a given coordinate by using the GW-XRT page "Fields Planned - search" tool.
+      </li>
+    </ul>
+    
+    <h3>Updating </h3>
+    <ul>
+      <li>
+	If not already made, make a new page for whole Swift team to check out sources by going to team page wiki, scrolling down to bottom, clicking on GWTriggers (GWTriggers) and following instructions to add new trigger e.g. S190728q.
+      </li>
+      <li>
+	Make a new page for UVOT only, by going to GWTriggers page (GWTriggers) and repeating with e.g.GW190728q, but this time don't fill in the table.
+      </li>
+      <li>
+	Fill in table instead in UVOTGWTriggers (UVOTGWTriggers) page (also found at by navigating from bottom of main team page)
+      </li>
+      <li>
+	Record any new sources of interest you find on the UVOTGWTriggers page for other UVOT team members to comment and check.
+      </li>
+      <li>
+	Any that are deemed interesting enough to follow up with ToOs and GCNs should be recorded on the GWTriggers pages.
+      </li>
+</ul>
+<h3>Further Candidate source checks<h3>
+      <li>
+	go to <a href="http://cdsportal.u-strasbg.fr">CDS Portal</a> and put in the coordinate to get an easy way to view the position in lots of images.
+	</li>
+      <li>
+	go to <a href="http://vizier.u-strasbg.fr/viz-bin/VizieR">Vizier</a> and put the coordinate in the "search by position", modify "target dimension" to 5 arcsec! Click on Go! (not 'find catalogs') Check sources found especially GAIA DR2 (g band),WISE (IR), AAVSO
+	</li>
+      <li>
+	Option: construct an SED from the catalogs using <a href="https://vizier.u-strasbg.fr/vizier/sed/doc/">Vizier SED catalogs</a> - this can give an idea of the sort of precursor or absence of it.
+	</li>
+      <li>
+	Is this a <a href="https://www.minorplanetcenter.net/cgi-bin/checkmp.cgi">minor planet</a>?
+      </li>
+      <li>
+	or <a href="https://www.space-track.org/auth/login">manmade satellite</a>?
+      </li>
+      <li>
+	Is the source near the edge which shows shift-and-add? Check if there is a star on/near(<20 arcsec) the opposite edge (compare sky image to larger DSS image and blink; use line region parallel to edge to line up)
+	</li>
+      <li>
+	is the source fuzzy or small and there is a very bright source nearly mirrored through the centre of the detector (it is not precisely mirrored but within ~200 pixels)
+      </li>
+      <li>
+	add new transient to https://wis-tns.weizmann.ac.il/ (TBD details)
+      </li>
+</ul>
+<h3>Updating the world</h3>
+<ul>
+  <li>
+    write GCN based on template. DRAFTUVOTDETECTIONGCN or DRAFTUVOTGCN_OBSCOMPLETE
+  </li>
+  </ul>
+{% endblock %}
