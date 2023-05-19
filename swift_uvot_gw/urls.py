@@ -14,8 +14,13 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.urls import path, include
+from django.views.generic import TemplateView
 
 urlpatterns = [
     path('', include('tom_common.urls')),
     path('nonlocalizedevents/', include('tom_nonlocalizedevents.urls', namespace='nonlocalizedevents')),
+    path('todolist/', TemplateView.as_view(template_name='todolist.html'),name='todolist'),
+    path('draftdetectiongcn/', TemplateView.as_view(template_name='draftgcn.html'),name='draftdetectiongcn'),
+    path('draftsummarygcn/', TemplateView.as_view(template_name='draftsummarygcn.html'),name='draftsummarygcn'),
+
 ]

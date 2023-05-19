@@ -111,6 +111,7 @@ class UVOTFacility(GenericObservationFacility):
             too.monitoring_freq=observation_payload['params']['monitoring_freq']
             too.exp_time_per_visit=observation_payload['params']['exp_time_per_visit']
 
+        #Updates too button
         TargetExtra.objects.filter(target_id=tid,key='ToO?').update(bool_value=True)
         
         if too.validate():
